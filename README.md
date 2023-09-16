@@ -63,7 +63,7 @@ This project was developed by  **Team CodeSpark**
 - [Ritika Kumari Gupta] (https://github.com/RitikaGupta02).
 - [Ujjwal Kumar] (https://github.com/Codeioholic).
 - [Sangram Keshari Pattnaik] (https://github.com/sangrampattnaik2003).
-- [Ritika Kumari] (https://github.com/username).
+- [Ritika Kumari] (https://github.com/Ri-ti-ka).
 - [Kajol Murmu] (https://github.com/username).
 
 
