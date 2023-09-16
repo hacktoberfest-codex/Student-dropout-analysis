@@ -59,12 +59,12 @@ Follow these instructions to get the project up and running on your local machin
 
 This project was developed by  ** Team CodeSpark**
 
--[Suchismita Behera] (https://github.com/suchismita004).
--[Ritika Kumari Gupta] (https://github.com/RitikaGupta02).
--[Ujjwal Kumar ] (https://github.com/username).
--[Sangram Kesari ] (https://github.com/username).
--[Ritika Kumari] (https://github.com/username).
--[Kajol Murmu] (https://github.com/username).
+- [Suchismita Behera] (https://github.com/suchismita004).
+- [Ritika Kumari Gupta] (https://github.com/RitikaGupta02).
+- [Ujjwal Kumar ] (https://github.com/username).
+- [Sangram Kesari ] (https://github.com/username).
+- [Ritika Kumari] (https://github.com/username).
+- [Kajol Murmu] (https://github.com/username).
 
 
 
