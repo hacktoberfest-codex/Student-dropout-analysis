@@ -57,7 +57,7 @@ Follow these instructions to get the project up and running on your local machin
 
 ## Credits
 
-This project was developed by  ** Team CodeSpark**
+This project was developed by  **Team CodeSpark**
 
 - [Suchismita Behera] (https://github.com/suchismita004).
 - [Ritika Kumari Gupta] (https://github.com/RitikaGupta02).
