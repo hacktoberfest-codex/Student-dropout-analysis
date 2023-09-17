@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+        <title>Search Box of Dropout Student</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+        <style> 
+        body {
+            padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #efefef;
+    background: url("https://cdn.dribbble.com/users/1330947/screenshots/5647952/media/f2dfdf338c07fd769993f41cecafe2fb.jpg?resize=400x300&vertical=center"); /* Replace 'your-background-image.jpg' with the URL or path to your background image */
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+    
+}
+    
+#search {
+    background: white;
+    height: 50px;
+    width: 300px;
+    margin-top: 10px;
+    border-radius: 3px;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    margin-bottom: 1px;
+}
+
+#inp {
+    width: 230px;
+    height: 50px;
+    background: none;
+    border: none;
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+    font-weight: 450;
+}
+
+#inp:focus, #btn:focus {
+    outline: none;
+}
+
+#btn {
+    height: 50px;
+    width: 50px;
+    background: none;
+    border: none;
+    color: #0033aa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+#search-items {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 225px;
+    background: white;
+    border-radius: 0 0 3px 3px;
+}
+
+.item {
+    width: 280px;
+    height: 50px;
+    background: rgb(241, 119, 20);
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    color: #4d2906;
+    
+}
+
+/**.item:last-child{
+    border-radius: 0 0 3px 3px;
+}*/
+
+.item:hover {
+    background: rgba(236, 135, 13, 0.133);
+    color: black
+    
+}
+</style>
+        
+    </head>
+    
+    <body>
+    
+        <h2>Districts of GUJARAT</h2>
+        
+        <div id="search-box">
+        
+            <div id="search">
+                <input id="inp" placeholder="Search..." type="search"/>
+                <a id="btn" href="#">
+                    <i class="fa fa-search"></i>
+                </a>
+            </div>
+            
+            <div id="search-items">
+                
+            </div>
+        </div>
+        <script>
+            var cities = ["Dahod","Narmada","Chhota Udepur","Tapi","Anand","Kheda","Vadodara Rural","MahiSagar","Surat Rural","Bhavnagar Rural"]
+
+window.onload = () => {
+
+    var inp = document.getElementById("inp");
+    inp.addEventListener("input", () =>{
+    
+        myInp(inp,true);
+        
+    });
+   
+   inp.addEventListener("blur",function(){
+   
+       //your code goes here
+       //myInp(inp,false);
+       //alert("blur");
+   });
+   
+   inp.addEventListener("focus",function(){
+       
+       myInp(inp,true);
+   
+   });
+   
+   var btn = document.getElementById("btn");
+   btn.addEventListener("click", () =>{
+       
+      if(inp.value != ""){
+      window.open("https://www.google.com/search?q="+inp.value+" Gujarat");
+      }
+       
+   });
+}
+
+function myInp(inp,b){
+    
+    var searchItems = document.getElementById("search-items");
+    
+    ext(searchItems);
+    
+    if(b){
+        
+        for( let i=0;i < cities.length; i++){
+            let lc = cities[i].toLowerCase();
+            let iv =  inp.value.toLowerCase();
+            
+            if(lc.includes(iv)){
+            
+                var elm = document.createElement("DIV");
+                var txt = document.createTextNode(cities[i]);
+            
+                elm.appendChild(txt);
+                elm.classList.add("item");
+            
+                elm.addEventListener("click",function(){
+                    
+                    inp.value = cities[i];
+                    myInp(inp,false);
+                    //alert("click");
+                    
+                });
+            
+            searchItems.appendChild(elm);
+            }
+        }
+    }
+}
+
+function ext(sI){
+    var len = sI.children.length;
+    
+    for(let i=0;i<len;i++){
+        sI.removeChild(sI.childNodes[len-i]);
+    }
+}
+        </script>
+    </body>
+</html>
